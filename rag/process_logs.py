@@ -50,6 +50,6 @@ def process_and_index_logs(log_data):
     print("Logs successfully indexed!")
 
 if __name__ == "__main__":
-    run_id = "your-github-action-run-id"  # Replace with your actual run ID
+    run_id = "15032328954"  # Replace with your actual run ID
     log_data = get_github_logs(run_id)
     process_and_index_logs(log_data)
