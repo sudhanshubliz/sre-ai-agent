@@ -1,15 +1,15 @@
 from langchain.chat_models import ChatOpenAI
-from dotenv import load_dotenv
 import os
 
-# Load environment variables from .env file
-load_dotenv()
-
 def run_risk_agent(pr_summary):
-    # Initialize the ChatOpenAI model with temperature and API key
-    llm = ChatOpenAI(temperature=0, openai_api_key=os.getenv("OPENAI_API_KEY"))
-    # Your logic here
+    # Ensure the API key is correctly loaded
+    api_key = os.getenv("OPENAI_API_KEY")
+    if not api_key:
+        raise RuntimeError("Environment variable OPENAI_API_KEY is not set.")
+
+    # Initialize the ChatOpenAI model
+    llm = ChatOpenAI(temperature=0, openai_api_key=api_key)
+
+    # Run the agent with the provided summary
     result = llm.predict(pr_summary)
-    print(os.getenv("OPENAI_API_KEY"))
-    # Return the result
     return result
