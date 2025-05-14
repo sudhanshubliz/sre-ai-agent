@@ -1,5 +1,5 @@
-llama-index
 openai
-pytest
-python-dotenv
+langchain
+chromadb
 streamlit
+requests
