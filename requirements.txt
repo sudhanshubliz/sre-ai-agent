@@ -3,3 +3,4 @@ langchain
 chromadb
 streamlit
 requests
+langchain_community
