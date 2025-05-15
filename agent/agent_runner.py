@@ -5,10 +5,7 @@ import os
 
 def run_risk_agent(pr_summary):
     # Load environment variables from the .env file
-    load_dotenv()
     # Ensure the API key is correctly loaded
-
-   # api_key = os.getenv("OPENAI_API_KEY")
 
     # Load API key securely
     load_dotenv()
