@@ -51,7 +51,7 @@ def analyze_change_request(change_request: str) -> dict:
         return {"error": str(e)}
 
 # Streamlit app code
-st.title("Change Risk Forecast Agent")
+st.title("🔮Change Risk Forecast Agent")
 st.markdown("""
 This tool analyzes change requests and forecasts their risk level intelligently, providing reasoning, recommendations, and explainability.
 """)
