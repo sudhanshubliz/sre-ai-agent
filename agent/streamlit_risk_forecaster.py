@@ -1,19 +1,10 @@
 import streamlit as st
 import os
 import json
-from dotenv import load_dotenv
 from groq import Groq
 
-# Load environment variables from the .env file
-load_dotenv()
-
 # Initialize the Groq client
-api_key = os.getenv("GROQ_API_KEY")
-if not api_key:
-    st.error("GROQ_API_KEY is not set. Please set it in your .env file.")
-    st.stop()
-
-client = Groq(api_key=api_key)
+client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 
 def analyze_change_request(change_request: str) -> dict:
     """

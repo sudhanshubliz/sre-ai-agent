@@ -6,3 +6,5 @@ requests
 langchain_community
 python-dotenv
 groq
+flask
+python-dotenv
