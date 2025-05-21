@@ -1,6 +1,7 @@
 name: Risk Forecast Agent
 
 on:
+  workflow_dispatch:
   pull_request:
     types: [opened, synchronize]
 
