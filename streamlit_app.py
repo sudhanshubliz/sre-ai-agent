@@ -51,13 +51,13 @@ def analyze_change_request(change_request: str) -> dict:
         return {"error": str(e)}
 
 # Streamlit app code
-st.title("🔮Change Risk Forecast Agent")
+st.title("🔮Change Risk Forecast Agentic AI")
 st.markdown("""
 This tool analyzes change requests and forecasts their risk level intelligently, providing reasoning, recommendations, and explainability.
 """)
 
 # Text area for user input
-change_request = st.text_area("Enter a summary of your change request or PR:")
+change_request = st.text_area("Enter a summary of your change request,Jenkins log or PR details:")
 
 if st.button("Analyze Risk"):
     with st.spinner("Analyzing the change request..."):
